@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/setting_labelWidth"
+            android:layout_height="wrap_content"
+            android:text="@string/text_samplePeriod"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/etSamplePeriodValue"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:text="1"
+            />
+
+        <Spinner
+            android:id="@+id/spSamplePeriodScale"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:entries="@array/PeriodSelect"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/setting_labelWidth"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="采样总时 : " />
+
+        <EditText
+            android:id="@+id/etSampleTotalTimeValue"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="10"
+            android:textAlignment="center" />
+        <Spinner
+            android:id="@+id/spSampleTotalTimeScale"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:entries="@array/TotalSelect"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSettingInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="文件名 : " />
+
+        <EditText
+            android:id="@+id/etFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btnSettingStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="开始采集" />
+
+        <Button
+            android:id="@+id/btnSettingCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="取消" />
+    </LinearLayout>
+
+
+</LinearLayout>
