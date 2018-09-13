@@ -430,8 +430,15 @@ public class BLERecordService extends Service {
         try {
             String msg = new String(characteristic.getValue(), "ascii");
             buildBLENotify(msg);
-            lastValueTO = msg.substring(4,9);
-            lastValueTA = msg.substring(13,18);
+//            lastValueTO = msg.substring(4,9);
+//            lastValueTA = msg.substring(13,18);
+            String[] msgs = msg.split("\t");
+            lastValueTO = msgs[0];
+            if (msgs.length >= 2) {
+                lastValueTA = msgs[1];
+            } else {
+                lastValueTA = "0";
+            }
             //TODO 停止输出时间项
             String formatS = lastValueTO + "\t" + lastValueTA + "\t" +
                     SimpleDateFormat.getTimeInstance().format(new Date(System.currentTimeMillis()));
